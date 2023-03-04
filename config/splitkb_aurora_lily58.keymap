@@ -29,7 +29,7 @@
                                  &kp LGUI   &kp LALT      &mo 1  &kp SPACE     &mo 3     &mo 2     &mo 4      &mo 5
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_DOWN PG_UP>;
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
         Lower {
@@ -48,7 +48,7 @@
                                           &trans        &trans  &trans  &trans  &trans  &trans     &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
         };
 
         Raise {
