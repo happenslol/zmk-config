@@ -14,13 +14,6 @@
         compatible = "zmk,keymap";
 
         Default {
-            // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
-
             bindings = <
    &kp ESC  &kp HOME  &kp END  &kp INSERT  &kp PG_UP  &kp PG_DN                              &kp LEFT  &kp DOWN     &kp UP  &kp RIGHT   &kp DEL     &kp BACKSPACE
    &kp TAB     &kp Q    &kp W       &kp E      &kp R      &kp T                                 &kp Y     &kp U      &kp I      &kp O     &kp P          &kp RALT
@@ -33,13 +26,6 @@
         };
 
         Lower {
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-            //                     |      |      |      |        |  |       |      |       |       |
-
             bindings = <
 &kp GRAVE        &trans        &trans        &trans        &trans  &trans                      &trans     &trans     &trans            &trans             &trans         &trans
    &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &trans                      &trans     &trans     &trans            &trans             &trans         &trans
@@ -50,13 +36,6 @@
         };
 
         Raise {
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
-            //                     |      |      |      |        |  |       |      |       |       |
-
             bindings = <
 &kp TILDE    &trans  &trans    &trans      &trans       &trans                     &trans          &trans        &trans                &trans                 &trans   &kp DEL
    &trans  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                  &kp CARET   &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans
@@ -90,11 +69,11 @@
 
         Hardware {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans  &trans  &trans  &trans  &out OUT_BLE  &out OUT_USB
-    &trans        &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans        &trans        &trans
-    &trans        &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans        &trans        &trans
-    &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans
-                                              &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                      &bt BT_SEL 5  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &out BT_SEL 1  &out BT_SEL 0
+&trans  &trans  &trans  &trans  &trans  &trans                            &trans        &trans        &trans        &trans         &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &trans        &trans        &trans        &trans         &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_CLR  &out OUT_BLE  &out OUT_USB        &trans        &trans         &trans         &trans
+                        &trans  &trans  &trans  &trans      &trans        &trans        &trans        &trans
             >;
         };
     };
